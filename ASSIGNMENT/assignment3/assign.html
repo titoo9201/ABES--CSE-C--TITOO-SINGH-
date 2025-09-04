@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #main{
+            display: flex;
+    
+        }
+        .java{
+          background-color: red;
+          font-size: 30px;
+          color: white;
+          padding: 20px;
+          margin: 20px;
+          border: 5px solid black;
+          border-radius: 10px;
+        }
+        img{
+        height: 300px;
+        width: 300px;
+         object-fit: cover;
+          
+        }
+        img:hover{
+            transform: scale(1.05);
+            transition: cubic-bezier(0.19, 1, 0.22, 1) .2;
+        }
+        .java:hover{
+             transform: scale(1.05);
+            transition: cubic-bezier(0.19, 1, 0.22, 1) .2;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        
+        <div class="java"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQkn9wYIhnym59AZ-4rdRelW6xfPh4Yuxiw&s" alt="">   <h2>  Pizza</h2></div>
+         
+        <div class="java"><img src="https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" alt=""><h2>  Burger</h2></div>
+     
+        <div class="java"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7kRjFKUc3YqCe-4hdV_JGjU_lKrMryzJNQA&s" alt=""><h2>  Tikki</h2></div>
+    </div>
+</body>
+</html>
