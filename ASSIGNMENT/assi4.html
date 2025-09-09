@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipkart</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f3f6;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: #2874f0; 
+      color: white;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .search-box {
+      position: relative;
+      width: 300px;
+      margin-left: 457px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 35px 8px 12px;
+      border-radius: 3px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: gray;
+      font-size: 18px;
+      pointer-events: none;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .navbar-right div:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 20px;
+      padding: 20px 30px;
+      text-align: center;
+      background-color: #36454F; 
+    }
+
+    .category-item {
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .category-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .category-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .category-item:hover {
+      color: #ffce00; 
+      cursor: pointer;
+    }
+
+    .category-item div {
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        Flipkart
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search for Products, Brands and More">
+        <i class="ri-search-line"></i>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="user">👤 user</div>
+      <div class="cart">🛒 Cart</div>
+      <div class="seller">🧾 Become a Seller</div>
+    </div>
+  </div>
+
+  
+  <div class="categories">
+    <div class="category-item">
+      <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_minutes_desktop-bc73ae.svg" alt="Minutes">
+      <div>Minutes</div>
+    </div>
+    <div class="category-item">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/5f2ee7f883cdb774.png?q=100" alt="Mobiles">
+      <div>Mobiles & Tablets</div>
+    </div>
+    <div class="category-item">
+      <img src="https://rukminim2.flixcart.com/flap/64/64/image/29327f40e9c4d26b.png?q=100" alt="Grocery">
+      <div>Grocery</div>
+    </div>
+    <div class="category-item">
+      <img src="https://plus.unsplash.com/premium_vector-1724163333366-dc150b75f069?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion">
+      <div>Fashion</div>
+    </div>
+    <div class="category-item">
+      <img src="https://as2.ftcdn.net/v2/jpg/03/64/41/07/1000_F_364410756_Ev3WoDfNyxO9c9n4tYIsU5YBQWAP3UF8.jpg" alt="Electronics">
+      <div>Electronics</div>
+    </div>
+  </div>
+
+</body>
+</html>
