@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #abc{
+               border: 5px solid aqua;
+               height: 300px;
+               width: 300px;
+               padding: 30px;
+               background-color: beige;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="abc">
+        <button onclick="or()">orange</button>
+        <button  onclick="wh()">white</button>
+        <button  onclick="gr()">green</button>
+    </div>
+    <script>
+        
+        function or()
+        {
+              document.getElementById("abc").style.backgroundColor="orange";
+        }
+        function wh()
+        {
+              document.getElementById("abc").style.backgroundColor="white";
+        }
+        function gr()
+        {
+              document.getElementById("abc").style.backgroundColor="green";
+        }
+    </script>
+</body>
+</html>
