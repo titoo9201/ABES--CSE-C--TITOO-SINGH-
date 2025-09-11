@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+     body {
+      height: 100vh;
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      background-color: #f0f0f0;
+    }
+        
+        #abc{
+            border: 5px solid bisque;
+            background-color: pink;
+            height: 300px;
+            width: 300px;
+            padding: 40px;
+            text-align: center;
+          
+        
+
+        }
+
+
+        p{
+            color: black;
+            font-size: 20px
+        }
+        button{
+            margin: 10px;
+            padding: 8px 12px;
+        }
+        #ch{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        img{
+            height: 35%;
+            width: 35%;
+            object-fit: contain;
+            border-radius: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div id="abc">
+        <img src="https://www.shutterstock.com/image-vector/clock-icon-trendy-flat-style-600nw-674379841.jpg">
+        <p> COUNTING THE NO </p>
+        <br>
+        <p id="ch">0</p><br><br>
+        <button onclick="plus()">ADD</button>
+        <button onclick="minus()">SUB</button>
+
+    </div>
+<script>
+let c=0;
+    function plus(){
+       if(c<10)
+       {
+        
+ c++;
+
+ document.getElementById("ch").innerHTML=c;
+ 
+
+
+       }
+       else{
+         alert("Maximum limit reached (10)");
+       }
+       
+
+    }
+    function minus(){
+       if(c>0)
+       {
+        c--;
+        document.getElementById("ch").innerHTML=c;
+       }
+        
+    }
+    
+</script>
+    
+</body>
+</html>
