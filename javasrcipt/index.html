@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .red-text{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <p id="abc"></p>
+    <p class="red-text">Titoo is the best developer</p>
     <script>
-        alert("you are hacked")
-        document.write("hi i am java developer ")
-        let ch=document.querySelector("#abc")
-        ch.innerHTML="java is best language"
+     
+        let ch=document.querySelector(".red-text")
+        ch.addEventListener("click",function (params) {
+            ch.classList.toggle("red-text")
+            
+        })
 
     </script>
 </body>
