@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Tables</title>
+</head>
+<body>
+    <script>
+        let a = 2;
+        let b = 3;
+        let c;
+        let d;
+       let even=[];
+        let odd=[];
+        
+
+   
+        for (let i = 1; i <= 10; i++) {
+            c=a*i;
+            document.write(`${c} `);
+            if(c%2==0)
+            {
+                even.push(c);
+            }  
+            else {
+                odd.push(c);
+            }
+        }
+
+        document.write("<br>");
+      
+
+        
+
+        for (let i = 1; i <= 10; i++) {
+             d = i * b;
+         document.write(`${d} `);
+        if(d%2==0)
+            {
+                even.push(d);
+            }  
+            else {
+                odd.push(d);
+            }
+            
+        }
+
+    document.write("<br> even")
+    even.forEach(num=>document.write(num," "));
+    document.write("<br> odd")
+    odd.forEach(num=>document.write(num," "));
+
+
+      
+
+    </script>
+</body>
+</html>
