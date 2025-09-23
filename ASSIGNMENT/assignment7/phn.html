@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            background-color: antiquewhite;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            padding-top: 50px;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+        }
+        .matched {
+            width: 300px;
+            background-color: gray;
+            border: 3px solid black;
+            color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .matched p {
+            margin: 5px 0;
+        }
+        .image-box {
+            width: 100%;
+            height: 220px;  /* Height bada kiya for better view */
+            margin-top: 10px;
+            border: 2px solid white;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #222;
+        }
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Image proportion maintain karega */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        const phn = [
+            { Brand: "Samsung", phname: "Samsung", price: 43000, img:"https://cdn.mos.cms.futurecdn.net/jnuvbYxWoHiVGU4Eqb3tND.jpg" },
+            { Brand: "Apple", phname: "iPhone", price: 100000, img:"https://crdms.images.consumerreports.org/f_auto,w_1200/prod/products/cr/models/404543-smartphones-apple-iphone-13-10023483.png" }
+        ];
+
+        const container = document.getElementById("container");
+
+        phn.forEach(item => {
+            let div = document.createElement("div");
+            div.className = "matched";
+            div.innerHTML = `
+                <p><b>Brand:</b> ${item.Brand}</p>
+                <p><b>Name:</b> ${item.phname}</p>
+                <p><b>Price:</b> ₹${item.price}</p>
+                <div class="image-box">
+                    <img src="${item.img}" alt="${item.phname}">
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>

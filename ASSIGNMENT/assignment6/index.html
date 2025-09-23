@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            background-color:antiquewhite;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            
+        
+        }
+        #matched{
+            height: 500px;
+            width: 500px;
+            background-color: gray;
+            margin-right: 20px;
+            border: 3px solid black;
+            
+            
+         
+
+        }
+        #unmatched{
+            height: 500px;
+            width: 500px;
+            background-color: gray;
+            border: 3px solid black;
+            
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div id="matched"> </div>
+    <div id="unmatched" > </div>
+    <script>
+        const student1={
+            name:"rahul",
+           rollno :"2300xxxx",
+           class:"it"
+        };
+        const student2={
+            name:"rohan",
+           rollno :"2300xxxx",
+           class:"it"
+        };
+        const student3={
+            name:"mohan",
+           rollno :"2300xxxx",
+           class:"it"
+        };
+        const student4={
+            name:"sohan",
+           rollno :"2300xxxx",
+           class:"cse"
+        };
+        const student5={
+            name:"preal",
+           rollno :"2300xxxx",
+           class:"cs"
+        };
+      const matchedDiv = document.getElementById("matched");
+      matchedDiv.innerHTML = `
+        <p>Name: ${student1.name}</p>
+        <p>Roll No: ${student1.rollno}</p>
+        <p>Age: ${student1.class}</p>
+        `;
+
+     const mat1 = document.getElementById("matched");
+      mat1.innerHTML = `
+        <p>Name: ${student2.name}</p>
+        <p>Roll No: ${student2.rollno}</p>
+        <p>Age: ${student2.class}</p>
+    `;
+      const mat2 = document.getElementById("matched");
+      mat2.innerHTML = `
+        <p>Name: ${student3.name}</p>
+        <p>Roll No: ${student3.rollno}</p>
+        <p>Age: ${student3.class}</p>
+    `;
+    </script>
+</body>
+</html>
