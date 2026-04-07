@@ -1,4 +1,4 @@
-/** task 1 create a  basic express js application */
+/**create a  basic express js application */
 
 const express = require("express");
 const app = express();
