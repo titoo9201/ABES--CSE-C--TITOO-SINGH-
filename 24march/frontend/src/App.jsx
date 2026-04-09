@@ -9,7 +9,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // Here you would typically handle form submission, e.g., send data to an API
+
     try {
       const response = await axios.post('http://localhost:3000/api/auth/register', {email, password},{
         withCredentials: true
@@ -25,6 +25,7 @@ function App() {
     }
       
     }
+    
 
   }
 
