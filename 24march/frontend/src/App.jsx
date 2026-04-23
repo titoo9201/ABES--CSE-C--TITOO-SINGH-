@@ -1,88 +1,21 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
-import axios from 'axios' 
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 function App() {
-  const [rememberMe, setRememberMe] = useState(false)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+	const [view, setView] = useState('home')
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+	if (view === 'login') {
+		return <Login onGoHome={() => setView('home')} onGoSignup={() => setView('signup')} />
+	}
 
-    try {
-      const response = await axios.post('http://localhost:3000/api/auth/register', {email, password},{
-        withCredentials: true
-      })
+	if (view === 'signup') {
+		return <Signup onGoHome={() => setView('home')} onGoLogin={() => setView('login')} />
+	}
 
-    alert("User Registered Successfully ✅");
-    console.log(response.data);
-    } catch (error) {
-       if (error.response) {
-      alert(error.response.data.message);
-    } else {
-      alert("Something went wrong ❌");
-    }
-      
-    }
-    
-
-  }
-
-  return (
-    <div className="login-page">
-      <div className="login-container">
-        <div className="login-header">
-          <h1>Welcome Back</h1>
-          <p>Sign in to your account</p>
-        </div>
-
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="email">Email Address</label>
-            <input 
-              type="email" 
-              id="email" 
-              placeholder="Enter your email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              id="password" 
-              placeholder="Enter your password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          <div className="remember-forgot">
-            <label>
-              <input 
-                type="checkbox" 
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-              /> 
-              Remember me
-            </label>
-            <a href="#">Forgot password?</a>
-          </div>
-
-          <button type="submit" className="login-btn">Sign In</button>
-        </form>
-
-        <div className="signup-link">
-          Don't have an account? <a href="#">Sign up here</a>
-        </div>
-      </div>
-    </div>
-  )
+	return <Home onGoLogin={() => setView('login')} onGoSignup={() => setView('signup')} />
 }
 
 export default App
